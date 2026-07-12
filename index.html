@@ -13,22 +13,24 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  
+
+  <div id="page-home" class="page">
+
   <section class="hero" id="hero">
- 
+
     <div class="hero-left">
       <div class="hero-left-inner">
- 
+
         <div class="avatar-wrap">
           <img
-            src="profile.jpeg"
+            src="profile.png"
             alt="Aditya Upadhyay"
             class="avatar-img"
             width="112"
             height="112"
           />
         </div>
- 
+
 
         <h1 class="name">
           <span class="bracket">&lt;</span>ADITYA&nbsp;UPADHYAY<span class="bracket">/&gt;</span>
@@ -64,7 +66,7 @@
             </svg>
             <span>LeetCode</span>
           </a>
- 
+
           <a href="https://mail.google.com/mail/?view=cm&to=upadhyayaditya432@gmail.com" target="_blank" rel="noopener" class="social-link" aria-label="Email">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
@@ -101,7 +103,7 @@
         <div class="about-text">
           <p>
             I'm Aditya Upadhyay a Computer Science Engineering student with a slightly unusual origin story for a developer: it starts with GTA Vice City.
-            As a low-key curious kid, I kept wondering <em>how this games actually worked</em>. 
+            As a low-key curious kid, I kept wondering <em>how this games actually worked</em>.
             That curiosity never left, and it slowly became the reason I write code.
           </p>
           <p>
@@ -206,16 +208,20 @@
 
       <div class="projects-grid">
 
-        <!-- Project 2 -->
+        <!-- Project 1 -->
         <article class="project-card reveal">
-          <div class="project-img-wrap">
-            <div class="project-img-placeholder" aria-label="Bookmark Manager screenshot placeholder">
-              <span class="img-label">Project Image</span>
+          <a href="#monkgully" style="display:block" aria-label="View MonkGully case study" onclick="showPage('monkgully'); return false;">
+            <div class="project-img-wrap">
+              <div class="project-img-placeholder" aria-label="MonkGully screenshot placeholder">
+                <span class="img-label">Project Image</span>
+              </div>
             </div>
-          </div>
+          </a>
           <div class="project-body">
-            <h3 class="project-title">Bookmark Manager</h3>
-            <p class="project-desc">A responsive bookmark manager featuring dark mode, drag & drop reordering, category organisation, and persistent local storage.</p>
+            <h3 class="project-title">
+              <a href="#monkgully" onclick="showPage('monkgully'); return false;">MonkGully</a>
+            </h3>
+            <p class="project-desc">A gaming-gear landing page with bold visual storytelling, smooth scroll interactions, and a fully responsive layout built from scratch.</p>
             <div class="project-tags">
               <span>HTML</span><span>CSS</span><span>JavaScript</span>
             </div>
@@ -228,20 +234,28 @@
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3v2H7v14h14v-7h2v7c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h7zm7 0v6h-2V6.41l-7.29 7.3-1.42-1.42L18.59 5H16V3h5z"/></svg>
                 Live Demo
               </a>
+              <a href="#monkgully" class="project-link" onclick="showPage('monkgully'); return false;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12.5a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+                Case Study
+              </a>
             </div>
           </div>
         </article>
 
-        <!-- Project 3 -->
+        <!-- Project 2 -->
         <article class="project-card reveal">
-          <div class="project-img-wrap">
-            <div class="project-img-placeholder" aria-label="Portfolio Website screenshot placeholder">
-              <span class="img-label">Project Image</span>
+          <a href="#monkmind" style="display:block" aria-label="View MonkMind case study" onclick="showPage('monkmind'); return false;">
+            <div class="project-img-wrap">
+              <div class="project-img-placeholder" aria-label="MonkMind screenshot placeholder">
+                <span class="img-label">Project Image</span>
+              </div>
             </div>
-          </div>
+          </a>
           <div class="project-body">
-            <h3 class="project-title">Portfolio Website</h3>
-            <p class="project-desc">A personal responsive portfolio — the very site you're looking at. Designed from scratch with attention to typography, layout, and subtle animation.</p>
+            <h3 class="project-title">
+              <a href="#monkmind" onclick="showPage('monkmind'); return false;">MonkMind</a>
+            </h3>
+            <p class="project-desc">A quiz platform where users build custom quizzes, browse the community's, and take timed challenges — built with vanilla HTML, CSS, and JavaScript, no frameworks.</p>
             <div class="project-tags">
               <span>HTML</span><span>CSS</span><span>JavaScript</span>
             </div>
@@ -249,6 +263,51 @@
               <a href="#" class="project-link">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.607.069-.607 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.09-.647.35-1.087.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.683-.104-.253-.447-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.641.699 1.028 1.592 1.028 2.683 0 3.842-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
                 GitHub
+              </a>
+              <a href="#" class="project-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3v2H7v14h14v-7h2v7c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h7zm7 0v6h-2V6.41l-7.29 7.3-1.42-1.42L18.59 5H16V3h5z"/></svg>
+                Live Demo
+              </a>
+              <a href="#monkmind" class="project-link" onclick="showPage('monkmind'); return false;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12.5a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+                Case Study
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card reveal">
+          <a href="#doodle-calculator" style="display:block" aria-label="View Doodle Calculator case study" onclick="showPage('doodle-calculator'); return false;">
+            <div class="project-img-wrap">
+              <!-- TODO: replace with actual Doodle Calculator screenshot -->
+              <div class="project-img-placeholder" aria-label="Doodle Calculator screenshot placeholder">
+                <span class="img-label">Project Image</span>
+              </div>
+            </div>
+          </a>
+          <div class="project-body">
+            <h3 class="project-title">
+              <a href="#doodle-calculator" onclick="showPage('doodle-calculator'); return false;">Doodle Calculator</a>
+            </h3>
+            <p class="project-desc">A hand-drawn, sketchbook-style calculator with chained calculations, keyboard support, and careful number formatting — built with vanilla HTML, CSS, and JavaScript.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <!-- TODO: replace with actual GitHub repo URL -->
+              <a href="#" class="project-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.607.069-.607 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.09-.647.35-1.087.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.683-.104-.253-.447-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.641.699 1.028 1.592 1.028 2.683 0 3.842-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                GitHub
+              </a>
+              <!-- TODO: replace with actual live demo URL -->
+              <a href="#" class="project-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3v2H7v14h14v-7h2v7c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h7zm7 0v6h-2V6.41l-7.29 7.3-1.42-1.42L18.59 5H16V3h5z"/></svg>
+                Live Demo
+              </a>
+              <a href="#doodle-calculator" class="project-link" onclick="showPage('doodle-calculator'); return false;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12.5a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+                Case Study
               </a>
             </div>
           </div>
@@ -286,20 +345,17 @@
   <section class="section section-contact" id="contact">
     <div class="container">
 
-  <section class="section section-contact" id="contact">
-    <div class="container">
- 
       <div class="section-label">Contact</div>
- 
+
       <div class="contact-inner reveal">
         <h2 class="contact-heading">Let's build something amazing together.</h2>
         <p class="contact-sub">Whether it's a collab, an internship, or just a chai pe baate things my inbox is open.</p>
- 
+
         <div class="contact-links">
           <a href="https://mail.google.com/mail/?view=cm&to=upadhyayaditya432@gmail.com" target="_blank" rel="noopener" class="contact-link">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
             Email
-          </a>    
+          </a>
           <a href="https://www.linkedin.com/in/aditya-upadhyay-in/" target="_blank" rel="noopener" class="contact-link">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/></svg>
             LinkedIn
@@ -313,6 +369,438 @@
 
     </div>
   </section>
+
+
+  </div>
+
+  <div id="page-monkgully" class="page" hidden>
+
+
+  <section class="case-hero">
+    <div class="container">
+      <a href="#projects" class="back-link" onclick="showPage('home'); document.getElementById('projects').scrollIntoView({behavior:'smooth'}); return false;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"/></svg>
+        Back to Projects
+      </a>
+
+      <div class="case-eyebrow">Case Study</div>
+      <h1 class="case-title">MonkGully</h1>
+      <p class="case-tagline">A gaming-gear landing page built to sell the fantasy — bold visuals, layered motion, and a layout engineered to convert, using nothing but HTML, CSS, and JavaScript.</p>
+
+      <div class="case-tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Responsive Design</span>
+      </div>
+
+      <div class="case-cta-row">
+        <a href="#" class="btn btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3v2H7v14h14v-7h2v7c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h7zm7 0v6h-2V6.41l-7.29 7.3-1.42-1.42L18.59 5H16V3h5z"/></svg>
+          Live Demo
+        </a>
+        <a href="#" class="btn btn-outline">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.607.069-.607 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.09-.647.35-1.087.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.683-.104-.253-.447-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.641.699 1.028 1.592 1.028 2.683 0 3.842-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          GitHub
+        </a>
+      </div>
+
+      <div class="case-hero-img">
+        <div class="project-img-placeholder" aria-label="MonkGully hero screenshot placeholder">
+          <span class="img-label">assets/monkgully/hero.jpg</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2 class="section-heading">Overview</h2>
+      <p class="case-body-text">
+        MonkGully is a landing page concept for a gaming-gear brand, built to feel high-energy and premium without leaning on any framework. The focus was on layout rhythm, contrast, and motion — using pure HTML, CSS, and JavaScript to create a page that scrolls like a product trailer, section by section.
+      </p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2 class="section-heading">Key Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Scroll-Triggered Reveals</h3>
+          <p>Sections animate into view using an IntersectionObserver, keeping the page light without a library.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Smooth Anchor Navigation</h3>
+          <p>In-page links scroll smoothly to their targets for a seamless one-page browsing experience.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Responsive Hero Layout</h3>
+          <p>A split hero section that gracefully collapses into a stacked layout on smaller screens.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Dark Mode Support</h3>
+          <p>A persisted theme toggle switches the whole page between light and dark palettes instantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2 class="section-heading">Technical Highlights</h2>
+      <p class="case-body-text">
+        One of the more interesting problems was reworking the hero section's visual hierarchy — moving from a flat, static banner to a layered composition with clearer depth and focus.
+      </p>
+
+      <div class="compare-grid">
+        <div class="compare-col">
+          <figure>
+            <div class="compare-img">
+              <div class="project-img-placeholder" aria-label="MonkGully hero before redesign placeholder">
+                <span class="img-label">assets/monkgully/before.jpg</span>
+              </div>
+            </div>
+            <figcaption>Before</figcaption>
+          </figure>
+        </div>
+        <div class="compare-col">
+          <figure>
+            <div class="compare-img">
+              <div class="project-img-placeholder" aria-label="MonkGully hero after redesign placeholder">
+                <span class="img-label">assets/monkgully/after.jpg</span>
+              </div>
+            </div>
+            <figcaption>After</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2 class="section-heading">Screenshots</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="project-img-placeholder" aria-label="MonkGully product section screenshot placeholder">
+            <span class="img-label">assets/monkgully/screen-1.jpg</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="project-img-placeholder" aria-label="MonkGully features section screenshot placeholder">
+            <span class="img-label">assets/monkgully/screen-2.jpg</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="project-img-placeholder" aria-label="MonkGully mobile view screenshot placeholder">
+            <span class="img-label">assets/monkgully/screen-3.jpg</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2 class="section-heading">Tech Stack</h2>
+      <div class="stack-row">
+        <span class="stack-pill">HTML5</span>
+        <span class="stack-pill">CSS3 (Flexbox & Grid)</span>
+        <span class="stack-pill">JavaScript (ES6+)</span>
+        <span class="stack-pill">IntersectionObserver API</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2 class="section-heading">What I'd Do Next</h2>
+      <ul class="roadmap-list">
+        <li>Add a lightweight build step for image optimization and CSS/JS minification.</li>
+        <li>Introduce a small component pattern to reduce repeated markup across sections.</li>
+        <li>Add automated accessibility and performance checks (Lighthouse CI).</li>
+        <li>Expand the product showcase into a filterable grid with real product data.</li>
+      </ul>
+    </div>
+  </section>
+
+
+  </div>
+
+  <div id="page-monkmind" class="page" hidden>
+
+
+  <section class="case-hero">
+    <div class="container">
+      <a href="#projects" class="back-link" onclick="showPage('home'); document.getElementById('projects').scrollIntoView({behavior:'smooth'}); return false;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"/></svg>
+        Back to Projects
+      </a>
+
+      <div class="case-eyebrow">Case Study</div>
+      <h1 class="case-title">MonkMind</h1>
+      <p class="case-tagline">A quiz platform where users build custom quizzes, browse the community's, and take timed challenges — built with vanilla HTML, CSS, and JavaScript, no frameworks.</p>
+
+      <div class="case-tags">
+        <span class="tag">HTML5</span>
+        <span class="tag">CSS3</span>
+        <span class="tag">JavaScript (ES6+)</span>
+        <span class="tag">localStorage</span>
+        <span class="tag">Canvas API</span>
+      </div>
+
+      <div class="case-cta-row">
+        <a href="#" class="btn btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3v2H7v14h14v-7h2v7c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h7zm7 0v6h-2V6.41l-7.29 7.3-1.42-1.42L18.59 5H16V3h5z"/></svg>
+          Live Demo
+        </a>
+        <a href="#" class="btn btn-outline">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.607.069-.607 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.09-.647.35-1.087.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.683-.104-.253-.447-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.641.699 1.028 1.592 1.028 2.683 0 3.842-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          GitHub
+        </a>
+      </div>
+
+      <div class="case-hero-img">
+        <div class="project-img-placeholder" aria-label="MonkMind hero screenshot placeholder">
+          <span class="img-label">assets/monkmind/hero.jpg</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2 class="section-heading">Overview</h2>
+      <p class="case-body-text">
+        MonkMind is a full quiz application — registration, quiz creation, browsing, timed play, and scored results — built entirely in vanilla JavaScript to focus on front-end architecture rather than framework tooling. Accounts and quiz data are stored client-side via localStorage, since the goal was to build and polish the full UI/UX flow, not stand up a backend.
+      </p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2 class="section-heading">Key Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Quiz Builder</h3>
+          <p>A dynamic accordion interface for adding, editing, and reordering questions.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Search &amp; Filter</h3>
+          <p>Browse community quizzes by keyword, category, or difficulty.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Timed Play Mode</h3>
+          <p>Thirty seconds per question with automatic advance once time runs out.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Scored Results</h3>
+          <p>An accuracy ring visualizes performance, paired with a full answer review.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2 class="section-heading">Tech Stack</h2>
+      <div class="stack-row">
+        <span class="stack-pill">HTML5</span>
+        <span class="stack-pill">CSS3 (Grid &amp; Flexbox)</span>
+        <span class="stack-pill">JavaScript (ES6+)</span>
+        <span class="stack-pill">localStorage</span>
+        <span class="stack-pill">Canvas API</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2 class="section-heading">Screenshots</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="project-img-placeholder" aria-label="MonkMind quiz builder screenshot placeholder">
+            <span class="img-label">assets/monkmind/screen-builder.jpg</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="project-img-placeholder" aria-label="MonkMind quiz browsing screenshot placeholder">
+            <span class="img-label">assets/monkmind/screen-browse.jpg</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="project-img-placeholder" aria-label="MonkMind timed play mode screenshot placeholder">
+            <span class="img-label">assets/monkmind/screen-play.jpg</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="project-img-placeholder" aria-label="MonkMind scored results screenshot placeholder">
+            <span class="img-label">assets/monkmind/screen-results.jpg</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2 class="section-heading">Engineering Highlights</h2>
+      <ul class="highlight-list">
+        <li class="highlight-item">Every interactive piece is hand-built and keyboard-accessible: a modal with a focus trap and Escape-to-close, an accordion operable via Enter/Space, and quiz answers implemented as a proper radiogroup with arrow-key navigation — no UI library involved.</li>
+        <li class="highlight-item">Zero dependencies. No frameworks or build step — routing, state, and rendering are all plain JavaScript.</li>
+        <li class="highlight-item">Respects <code>prefers-reduced-motion</code> and maintains visible focus states throughout the interface.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2 class="section-heading">What I'd Improve</h2>
+      <ul class="roadmap-list">
+        <li>Move from localStorage to a real backend and database.</li>
+        <li>Add proper hashed-password authentication with sessions.</li>
+        <li>Add unit tests for the scoring and filtering logic.</li>
+        <li>Let users edit or delete their quizzes and view their attempt history.</li>
+      </ul>
+    </div>
+  </section>
+
+
+  </div>
+
+  <div id="page-doodle-calculator" class="page" hidden>
+
+
+  <section class="case-hero">
+    <div class="container">
+      <a href="#projects" class="back-link" onclick="showPage('home'); document.getElementById('projects').scrollIntoView({behavior:'smooth'}); return false;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"/></svg>
+        Back to Projects
+      </a>
+
+      <div class="case-eyebrow">Case Study</div>
+      <h1 class="case-title">Doodle Calculator</h1>
+      <p class="case-tagline">A hand-drawn, sketchbook-style calculator built with vanilla HTML, CSS, and JavaScript — chained calculations, keyboard support, and careful number formatting, no frameworks or dependencies.</p>
+
+      <div class="case-tags">
+        <span class="tag">HTML5</span>
+        <span class="tag">CSS3</span>
+        <span class="tag">JavaScript (ES6+)</span>
+        <span class="tag">CSS Custom Properties</span>
+        <span class="tag">ARIA / A11Y</span>
+      </div>
+
+      <div class="case-cta-row">
+        <!-- TODO: replace with actual live demo URL -->
+        <a href="#" class="btn btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3v2H7v14h14v-7h2v7c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h7zm7 0v6h-2V6.41l-7.29 7.3-1.42-1.42L18.59 5H16V3h5z"/></svg>
+          Live Demo
+        </a>
+        <!-- TODO: replace with actual GitHub repo URL -->
+        <a href="#" class="btn btn-outline">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.607.069-.607 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.09-.647.35-1.087.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.683-.104-.253-.447-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.641.699 1.028 1.592 1.028 2.683 0 3.842-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          GitHub
+        </a>
+      </div>
+
+      <div class="case-hero-img">
+        <!-- TODO: replace with actual Doodle Calculator hero screenshot -->
+        <div class="project-img-placeholder" aria-label="Doodle Calculator hero screenshot placeholder">
+          <span class="img-label">assets/doodle-calculator/hero.jpg</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2 class="section-heading">Overview</h2>
+      <p class="case-body-text">
+        Doodle Calculator is a vanilla-JS calculator built to focus on clean state management and interaction logic rather than lean on a framework. Chained calculations, keyboard input, and click input all route through the same handler functions, and the display formatting handles edge cases — floating-point rounding, division by zero, very large or very small results — that a lot of tutorial calculators skip.
+      </p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2 class="section-heading">Key Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Chained Calculations</h3>
+          <p>Enter multi-step expressions like 5 + 3 × 2 and watch them evaluate left to right as you type.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Live Expression Preview</h3>
+          <p>The full expression builds above the result in real time, so you always see what's being calculated.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Full Keyboard Support</h3>
+          <p>Every button — digits, operators, equals, clear, delete — mirrors a keyboard shortcut through shared handler logic.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Smart Number Formatting</h3>
+          <p>Very large, very small, or imprecise decimal results are rounded and switched to exponential notation automatically.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2 class="section-heading">Tech Stack</h2>
+      <div class="stack-row">
+        <span class="stack-pill">HTML5</span>
+        <span class="stack-pill">CSS3 (Grid, Flexbox, Custom Properties)</span>
+        <span class="stack-pill">JavaScript (ES6+)</span>
+        <span class="stack-pill">Google Fonts</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2 class="section-heading">How It Works</h2>
+      <p class="case-body-text">
+        The project is split by concern: markup, styling, and logic each live in their own file, with button behavior driven by <code>data-action</code> attributes rather than hardcoded per-key handlers.
+      </p>
+      <div class="case-tags">
+        <span class="tag">index.html</span>
+        <span class="tag">style.css</span>
+        <span class="tag">script.js</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2 class="section-heading">Challenges &amp; Learnings</h2>
+      <ul class="challenge-list">
+        <li class="challenge-item">
+          <h3>Keeping click and keyboard input in sync</h3>
+          <p>Both input methods needed identical visual feedback and logic, which meant funneling both through the same handler functions instead of duplicating logic across two event listeners.</p>
+        </li>
+        <li class="challenge-item">
+          <h3>Formatting numbers without breaking the layout</h3>
+          <p>Floating-point results needed rounding before display, and very large or small numbers needed a fallback to exponential notation so the display never overflows.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2 class="section-heading">Future Improvements</h2>
+      <ul class="roadmap-list">
+        <li>Proper operator precedence instead of left-to-right evaluation.</li>
+        <li>A basic calculation history panel.</li>
+        <li>Unit tests for the calculate() and formatNumber() functions.</li>
+      </ul>
+    </div>
+  </section>
+
+
+  </div>
 
   <footer class="footer">
     <div class="container">

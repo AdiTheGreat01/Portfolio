@@ -76,3 +76,24 @@ window.addEventListener('resize', () => {
     });
   }
 })();
+
+
+/* ---- Single-file page router (home / case studies) ---- */
+(function () {
+  window.showPage = function (id) {
+    document.querySelectorAll('.page').forEach(function (p) { p.hidden = true; });
+    var target = document.getElementById('page-' + id);
+    if (!target) return;
+    target.hidden = false;
+    // Elements in a page that was hidden at load never intersected the
+    // viewport, so the reveal observer never fired for them — show them now.
+    target.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
+    window.scrollTo({ top: 0, behavior: 'auto' });
+    history.replaceState(null, '', id === 'home' ? '#' : '#' + id);
+  };
+
+  var initial = (location.hash || '').replace('#', '');
+  if (initial === 'monkgully' || initial === 'monkmind' || initial === 'doodle-calculator') {
+    window.showPage(initial);
+  }
+})();
