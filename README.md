@@ -1,8 +1,8 @@
-# Aditya Upadhyay — Developer Portfolio
+# Aditya Upadhyay Developer Portfolio
 
 ## Overview
 
-This is my personal portfolio site — a single-page site that introduces me, lists my skills, and walks through a couple of projects in more detail through dedicated case study pages. I built it mainly to have a real place to point recruiters and interviewers to, instead of a static resume PDF, and to practice writing clean, dependency-free front-end code without leaning on a framework as a crutch.
+This is my personal portfolio site a single-page site that introduces me, lists my skills, and walks through a couple of projects in more detail through dedicated case study pages. I built it mainly to have a real place to point recruiters and interviewers to, instead of a static resume PDF, and to practice writing clean, dependency-free front-end code without leaning on a framework as a crutch.
 
 The site covers an about section, a skills breakdown, project cards that link out to full case studies, an education section, and a contact section. Everything — including page-to-page navigation between the home page and each case study — runs on plain HTML, CSS, and JavaScript with no build step and no external UI libraries.
 
@@ -63,7 +63,7 @@ Styling is driven by a shared set of CSS custom properties (colors, radii, shado
 - Use "Back to Projects" on a case study page to return to the home page's projects section.
 - Toggle the sun/moon icon in the sidebar to switch between light and dark themes; the choice persists across visits.
 
-Live demo: https://portfolio-adithegreat.netlify.app/
+Live demo: [https://portfolio-adithegreat.netlify.app/](https://portfolioadithegreat.netlify.app/)
 
 ## Folder Structure
 
@@ -84,12 +84,6 @@ portfolio/
 
 **Dark mode without a flash of the wrong theme.** Reading the saved theme preference from `localStorage` and applying it before the rest of the page renders took a bit of trial and error to avoid a visible flash of light mode before it switched to dark.
 
-## Future Improvements
-
-- [Add details here — e.g. move project data into a JSON file and render cards dynamically]
-- Add real screenshots and live demo links for each case study
-- Add basic automated accessibility/performance checks (e.g. Lighthouse CI)
-- Consider a lightweight build step for image optimization
 
 ## Why This Project Matters
 
@@ -99,7 +93,3 @@ portfolio/
 - Includes a hand-written client-side router, showing an understanding of how routing and history APIs work under the hood
 - Prioritizes clean, readable, maintainable code over quick hacks — useful context for reviewing my coding style beyond a resume
 - Serves as a living project: new case studies get added as I build more things, so the repo itself shows ongoing, incremental work
-
-## License
-
-[Add details here — e.g. MIT License]
